@@ -1,0 +1,29 @@
+
+.label {
+  display: flex;
+  align-items: center;
+  grid-gap: 24px;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.12px;
+  color: #36536B;
+  text-align: left;
+  cursor: pointer;
+
+  .input {
+    width: 24px;
+    height: 24px;
+    background: rgba(54, 83, 107, 0.25);
+    appearance: none;
+    -webkit-appearance: none;
+
+    &:checked {
+      position: relative;
+      background: #BA4270 url("/img/checkbox-icon-check.svg") no-repeat center;
+    }
+
+    &:disabled {
+      background: rgba(54, 83, 107, 0.05);
+    }
+  }
+}

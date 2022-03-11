@@ -1,0 +1,66 @@
+@import "styles/utils";
+
+.pricingSection {
+  padding: 48px 0 80px;
+  text-align: center;
+
+  @include media(">tablet") {
+    padding: 75px 0 100px;
+  }
+
+  @include media(">desktop") {
+    text-align: left;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 80px;
+
+    @include media(">tablet") {
+      grid-gap: 100px;
+    }
+
+    @include media(">desktop") {
+      grid-gap: 96px;
+    }
+  }
+
+  .title {
+    font-family: DM Serif Display;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.246154px;
+    color: #36536B;
+
+    @include media(">tablet") {
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.37px;
+      color: #36536B;
+    }
+
+    @include media(">desktop") {
+      font-size: 56px;
+      line-height: 56px;
+      letter-spacing: -0.43px;
+    }
+  }
+
+  .planContainer {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 80px;
+
+    @include media(">tablet") {
+      justify-content: center;
+      flex-direction: row;
+      grid-gap: 10px;
+    }
+
+    @include media(">desktop") {
+      grid-gap: 30px;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import "styles/utils";
+
+.heroSection {
+  padding: 32px 0 80px 0;
+  text-align: center;
+
+  @include media(">tablet") {
+    padding: 48px 0 100px 0;
+  }
+
+  @include media(">desktop") {
+    padding: 74px 0 75px 0;
+    text-align: left;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 24px;
+
+    @include media(">tablet") {
+      grid-gap: 0;
+    }
+
+    @include media(">desktop") {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+  }
+
+  .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 24px;
+
+    @include media(">tablet") {
+      grid-gap: 0;
+    }
+
+    @include media(">desktop") {
+      align-items: flex-start;
+    }
+  }
+
+  .heroImageWrapper {
+    display: flex;
+    filter: drop-shadow(25px 25px 80px rgba(54, 83, 107, 0.3));
+
+    @include media(">tablet") {
+      margin-bottom: 48px;
+    }
+
+    @include media(">desktop") {
+      padding-right: 100px;
+      margin-bottom: 0;
+    }
+
+    .heroImage {
+      width: 128px;
+
+      @include media(">tablet") {
+        width: 159px;
+      }
+
+      @include media(">desktop") {
+        width: auto;
+        height: 500px;
+      }
+    }
+  }
+
+  .title {
+    font-family: DM Serif Display;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: normal;
+    letter-spacing: -0.25px;
+    color: #36536B;
+
+    @include media(">tablet") {
+      width: 573px;
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.37px;
+      color: #36536B;
+      margin-bottom: 22px;
+    }
+
+    @include media(">desktop") {
+      width: 546px;
+      font-size: 72px;
+      line-height: 72px;
+      letter-spacing: -0.55px;
+      margin-bottom: 38px;
+    }
+  }
+
+  .scheduleDemoContainer {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+    width: 100%;
+
+    @include media(">tablet") {
+      position: relative;
+      max-width: 445px;
+      flex-direction: row;
+      grid-gap: 0;
+      margin-bottom: 16px;
+
+      > input {
+        flex: 1;
+        padding-right: 200px;
+      }
+
+      > button {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  .questions {
+    font-size: 15px;
+    line-height: 18px;
+    color: #6C8294;
+
+    @include media(">desktop") {
+      padding-left: 32px;
+    }
+
+    a {
+      font-weight: bold;
+    }
+  }
+}
+

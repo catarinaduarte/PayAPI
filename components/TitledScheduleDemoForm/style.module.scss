@@ -1,0 +1,61 @@
+@import "styles/utils";
+
+.scheduleDemoFormWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  @include media(">tablet") {
+    align-items: center;
+  }
+
+  @include media(">desktop") {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-family: DM Serif Display;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.25px;
+    color: #36536B;
+    margin-bottom: 32px;
+
+    @include media(">tablet") {
+      font-size: 48px;
+      line-height: 56px;
+      letter-spacing: -0.37px;
+      margin-bottom: 40px;
+    }
+
+    @include media(">desktop") {
+      margin-bottom: 0;
+    }
+  }
+
+  .scheduleDemoContainer {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+    width: 100%;
+
+    @include media(">tablet") {
+      position: relative;
+      max-width: 445px;
+      flex-direction: row;
+      grid-gap: 0;
+
+      > input {
+        flex: 1;
+        padding-right: 200px;
+      }
+
+      > button {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@import "styles/utils";
+
+.planCard {
+
+  .title {
+    font-family: DM Serif Display;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.18px;
+    color: #BA4270;
+    margin-bottom: 81px;
+
+    @include media(">tablet") {
+      line-height: 40px;
+      letter-spacing: -0.185px;
+      margin-bottom: 13px;
+    }
+
+    @include media(">desktop") {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -0.25px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .description {
+    display: none;
+    font-size: 15px;
+    line-height: 28px;
+    color: #6C8294;
+
+    @include media(">tablet") {
+      display: block;
+      margin-bottom: 19px;
+    }
+
+    @include media(">desktop") {
+      margin-bottom: 8px;
+    }
+  }
+
+  .price {
+    font-family: DM Serif Display;
+    font-weight: normal;
+    font-size: 56px;
+    line-height: 72px;
+    letter-spacing: -0.43px;
+    color: #36536B;
+    margin-bottom: 24px;
+
+    @include media(">tablet") {
+      font-size: 48px;
+      letter-spacing: -0.37px;
+      margin-bottom: 21px;
+    }
+
+    @include media(">desktop") {
+      font-size: 56px;
+      line-height: 72px;
+      letter-spacing: -0.43px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .benefitContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 8px;
+    padding: 24px 0;
+    border-top: 1px solid rgba(54, 83, 107, 0.25);
+    border-bottom: 1px solid rgba(54, 83, 107, 0.25);
+    margin-bottom: 24px;
+    text-align: left;
+
+    @include media(">desktop") {
+      align-items: flex-start;
+    }
+
+    .benefitItem {
+      font-size: 16px;
+      line-height: 28px;
+      color: #91A3B1;
+      width: 134px;
+      padding-left: 32px;
+
+      &.active {
+        position: relative;
+        color: #36536B;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: -12px;
+          content: url("/img/icon-check.svg");
+
+          @include media(">desktop") {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

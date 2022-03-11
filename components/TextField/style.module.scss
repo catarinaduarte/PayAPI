@@ -1,0 +1,56 @@
+
+.textField {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  &.error {
+    .input {
+      color: rgba(255, 0, 0, 0.5);
+      border-bottom-color: rgba(255, 0, 0, 0.5);
+
+      &::placeholder {
+        color: rgba(255, 0, 0, 0.5);
+      }
+
+      &:focus {
+        color: rgba(255, 0, 0, 0.5);
+        border-bottom-color: rgba(255, 0, 0, 0.5);
+      }
+    }
+
+    .errorBlock {
+      display: block;
+    }
+  }
+
+  .input {
+    background: transparent;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.12px;
+    color: #36536B;
+    padding: 0 20px 17px;
+    border: none;
+    border-bottom: 1px solid rgba(54, 83, 107, 0.5);
+    outline: none;
+
+    &:focus {
+      color: #36536B;
+      border-bottom-color: #36536B;
+    }
+
+    &::placeholder {
+      color: rgba(54, 83, 107, 0.5);
+    }
+  }
+
+  .errorBlock {
+    display: none;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: -0.085px;
+    color: rgba(255, 0, 0, 0.5);
+    padding: 8px 0 0 20px;
+  }
+}

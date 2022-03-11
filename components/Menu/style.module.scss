@@ -1,0 +1,114 @@
+@import "styles/utils";
+
+.nav {
+  position: relative;
+
+  @include media(">desktop") {
+    flex: 1;
+  }
+
+  .menuWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #1B262F;
+    box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+    padding: 0 27px 95px 24px;
+    transform: translateX(300px);
+    transition: transform 0.6s;
+    z-index: 1;
+
+    @include media(">tablet") {
+      position: relative;
+      width: initial;
+      height: initial;
+      background: transparent;
+      padding: 0;
+      box-shadow: none;
+      transform: none;
+    }
+
+    &.open {
+      transform: translateX(0);
+    }
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 32px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: rgba(251, 252, 254, 0.7);
+    margin-top: 95px;
+    padding-top: 43px;
+    border-top: 1px solid white;
+
+    @include media(">tablet") {
+      flex-direction: row;
+      grid-gap: 40px;
+      font-size: 15px;
+      line-height: 18px;
+      color: rgba(54, 83, 107, 0.7);
+      margin-top: 0;
+      padding-top: 0;
+      border-top: none;
+    }
+
+    @include media(">desktop") {
+      margin-left: 64px;
+    }
+
+    li, a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      @include media(">tablet") {
+        width: initial;
+      }
+
+      @include media(">desktop") {
+        transition: color 0.3s;
+
+        &:last-child {
+          flex: 1;
+          justify-content: flex-end;
+        }
+
+        &:hover {
+          color: #36536B;
+        }
+      }
+    }
+
+    button {
+      width: 100%;
+
+      @include media(">tablet") {
+        margin-left: 45px;
+      }
+
+      @include media(">desktop") {
+        width: initial;
+      }
+    }
+  }
+
+  .menuButton {
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+
+    @include media(">tablet") {
+      display: none;
+    }
+  }
+}
